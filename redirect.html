@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>Redirecting...</title></head>
+<body>
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const gameId = params.get("gameId");
+  if (gameId) {
+    window.location.href = `invitetosport://join?gameId=${gameId}`;
+  } else {
+    window.location.href = "https://example.com"; // fallback if no gameId
+  }
+</script>
+</body>
+</html>
